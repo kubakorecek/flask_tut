@@ -1,0 +1,85 @@
+2018-05-11 15:05:28,792 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-11 15:05:29,867 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-11 15:06:01,118 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-11 22:00:21,332 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-11 22:00:39,481 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-11 22:09:59,426 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-11 22:10:01,098 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-11 22:12:41,417 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 10:44:33,765 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 10:45:42,122 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 10:46:19,439 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 10:51:32,490 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 10:58:47,674 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 11:04:48,456 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 11:06:55,486 INFO: Microblog startup [in /home/kubak182/python_app/flaskmicroblog/application/__init__.py:54]
+2018-05-18 11:07:12,802 ERROR: Exception on /register [POST] [in /home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kubak182/python_app/flaskmicroblog/application/routes.py", line 91, in register
+    db.session.commit()
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2254, in flush
+    self._flush(objects)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2344, in _flush
+    flush_context.execute()
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/home/kubak182/python_app/flaskmicroblog/flaskvenv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.email [SQL: 'INSERT INTO user (username, email, password_hash, about_me, last_seen) VALUES (?, ?, ?, ?, ?)'] [parameters: ('gfd', 'test1@gmail.com', 'pbkdf2:sha256:50000$ULELLZfK$664aeb70315bcf16eb2911a7d50e184e1791c1f04e25fd77e74fc278265632b5', None, '2018-05-18 09:07:12.801821')] (Background on this error at: http://sqlalche.me/e/gkpj)
